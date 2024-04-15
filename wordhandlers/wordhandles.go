@@ -1,9 +1,9 @@
 package wordhandlers
 
 import (
-	"WordKiller/models"
 	"encoding/json"
 	"fmt"
+	"github.com/Ec3o/WordKiller/models"
 	"log"
 	"os"
 	"strings"

@@ -1,11 +1,11 @@
 package test
 
 import (
-	"WordKiller/models"
-	"WordKiller/ui"
-	"WordKiller/wordhandlers"
 	"encoding/json"
 	"fmt"
+	"github.com/Ec3o/WordKiller/models"
+	"github.com/Ec3o/WordKiller/ui"
+	"github.com/Ec3o/WordKiller/wordhandlers"
 	"io/ioutil"
 	"log"
 	"time"

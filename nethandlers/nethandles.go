@@ -1,13 +1,13 @@
 package nethandlers
 
 import (
-	"WordKiller/models"
-	"WordKiller/ui"
-	"WordKiller/wordhandlers"
 	"bytes"
 	"crypto/rand"
 	"encoding/json"
 	"fmt"
+	"github.com/Ec3o/WordKiller/models"
+	"github.com/Ec3o/WordKiller/ui"
+	"github.com/Ec3o/WordKiller/wordhandlers"
 	"io/ioutil"
 	"log"
 	"net/http"
@@ -21,7 +21,7 @@ func GetHeaders(token string) http.Header {
 	headers := http.Header{}
 	headers.Set("Skl-Ticket", ticket)
 	headers.Set("X-Auth-Token", token)
-	headers.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36")
+	headers.Set("User-Agent", "Mozilla/5.0 (Linux; Android 4.2.1; M040 Build/JOP40D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36")
 	headers.Set("Accept", "application/json, text/plain, */*")
 	headers.Set("Accept-Language", "zh-CN,zh;q=0.9")
 	headers.Set("Connection", "keep-alive")
@@ -34,7 +34,7 @@ func PostHeader(token string) http.Header {
 	headers.Set("Sec-Ch-Ua", `"Chromium";v="117", "Not;A=Brand";v="8"`)
 	headers.Set("Skl-Ticket", generateTicket(21))
 	headers.Set("Sec-Ch-Ua-Mobile", "?0")
-	headers.Set("User-Agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/117.0.5938.132 Safari/537.36")
+	headers.Set("User-Agent", "Mozilla/5.0 (Linux; Android 4.2.1; M040 Build/JOP40D) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/31.0.1650.59 Mobile Safari/537.36")
 	headers.Set("Content-Type", "application/json")
 	headers.Set("Accept", "application/json, text/plain, */*")
 	headers.Set("X-Auth-Token", token)

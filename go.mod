@@ -1,4 +1,4 @@
-module WordKiller
+module github.com/Ec3o/WordKiller
 
 go 1.21.1
 
@@ -11,7 +11,10 @@ require (
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/satori/go.uuid v1.2.0 // indirect
 	github.com/wujunyi792/hdu-cas-helper v1.0.3 // indirect
-	golang.org/x/net v0.0.0-20220624214902-1bab6f366d9e // indirect
-	golang.org/x/text v0.3.7 // indirect
+	golang.org/x/crypto v0.22.0 // indirect
+	golang.org/x/net v0.21.0 // indirect
+	golang.org/x/sys v0.19.0 // indirect
+	golang.org/x/term v0.19.0 // indirect
+	golang.org/x/text v0.14.0 // indirect
 	moul.io/http2curl v1.0.0 // indirect
 )

@@ -1,10 +1,12 @@
 package main
 
 import (
-	hducashelper "WordKiller/hducashelper"
-	"WordKiller/nethandlers"
 	"fmt"
+	hducashelper "github.com/Ec3o/WordKiller/hducashelper"
+	"github.com/Ec3o/WordKiller/nethandlers"
+	"golang.org/x/crypto/ssh/terminal"
 	"log"
+	"os"
 	"time"
 )
 
@@ -16,8 +18,12 @@ func main() {
 	fmt.Print("[*]请输入 CAS 账号:")
 	fmt.Scanln(&username)
 	fmt.Print("[*]请输入 CAS 密码:")
-	fmt.Scanln(&password)
-	println("[*]正在登录...")
+	bytePassword, err := terminal.ReadPassword(int(os.Stdin.Fd()))
+	if err != nil {
+		log.Fatalln("密码读取失败:", err)
+	}
+	password = string(bytePassword)
+	println("\n[*]正在登录...")
 	time.Sleep(2 * time.Second)
 	ticker := hducashelper.CasPasswordLogin(username, password) // 杭电 CAS 账号密码
 	sklLogin := hducashelper.SklLogin(ticker)
